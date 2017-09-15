@@ -1,0 +1,8 @@
+prefix=/home/aman/catkin_ws/install
+
+Name: my_stage
+Description: Description of my_stage
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/aman/catkin_ws/install/lib 
+Requires: 

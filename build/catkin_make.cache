@@ -1,0 +1,2 @@
+beginner_tutorials:my_stage
+-DCATKIN_DEVEL_PREFIX=/home/aman/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/aman/catkin_ws/install -G Unix Makefiles
