@@ -7,3 +7,4 @@
 subdirs(gtest)
 subdirs(beginner_tutorials)
 subdirs(my_stage)
+subdirs(stage_package)

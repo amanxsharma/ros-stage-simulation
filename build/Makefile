@@ -464,6 +464,19 @@ stopper/fast:
 	$(MAKE) -f my_stage/CMakeFiles/stopper.dir/build.make my_stage/CMakeFiles/stopper.dir/build
 .PHONY : stopper/fast
 
+#=============================================================================
+# Target rules for targets named stage_exe
+
+# Build rule for target.
+stage_exe: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 stage_exe
+.PHONY : stage_exe
+
+# fast build rule for target.
+stage_exe/fast:
+	$(MAKE) -f stage_package/CMakeFiles/stage_exe.dir/build.make stage_package/CMakeFiles/stage_exe.dir/build
+.PHONY : stage_exe/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -500,6 +513,7 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... stopper"
+	@echo "... stage_exe"
 .PHONY : help
 
 

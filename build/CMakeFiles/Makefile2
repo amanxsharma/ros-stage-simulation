@@ -839,7 +839,7 @@ my_stage/preinstall:
 my_stage/CMakeFiles/stopper.dir/all:
 	$(MAKE) -f my_stage/CMakeFiles/stopper.dir/build.make my_stage/CMakeFiles/stopper.dir/depend
 	$(MAKE) -f my_stage/CMakeFiles/stopper.dir/build.make my_stage/CMakeFiles/stopper.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aman/catkin_ws/build/CMakeFiles --progress-num=5,6,7 "Built target stopper"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aman/catkin_ws/build/CMakeFiles --progress-num=7,8,9 "Built target stopper"
 .PHONY : my_stage/CMakeFiles/stopper.dir/all
 
 # Include target in all.
@@ -866,6 +866,61 @@ my_stage/CMakeFiles/stopper.dir/clean:
 
 # clean rule for target.
 clean: my_stage/CMakeFiles/stopper.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory stage_package
+
+# Convenience name for "all" pass in the directory.
+stage_package/all: stage_package/CMakeFiles/stage_exe.dir/all
+
+.PHONY : stage_package/all
+
+# Convenience name for "clean" pass in the directory.
+stage_package/clean: stage_package/CMakeFiles/stage_exe.dir/clean
+
+.PHONY : stage_package/clean
+
+# Convenience name for "preinstall" pass in the directory.
+stage_package/preinstall:
+
+.PHONY : stage_package/preinstall
+
+#=============================================================================
+# Target rules for target stage_package/CMakeFiles/stage_exe.dir
+
+# All Build rule for target.
+stage_package/CMakeFiles/stage_exe.dir/all:
+	$(MAKE) -f stage_package/CMakeFiles/stage_exe.dir/build.make stage_package/CMakeFiles/stage_exe.dir/depend
+	$(MAKE) -f stage_package/CMakeFiles/stage_exe.dir/build.make stage_package/CMakeFiles/stage_exe.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aman/catkin_ws/build/CMakeFiles --progress-num=5,6 "Built target stage_exe"
+.PHONY : stage_package/CMakeFiles/stage_exe.dir/all
+
+# Include target in all.
+all: stage_package/CMakeFiles/stage_exe.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+stage_package/CMakeFiles/stage_exe.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aman/catkin_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 stage_package/CMakeFiles/stage_exe.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aman/catkin_ws/build/CMakeFiles 0
+.PHONY : stage_package/CMakeFiles/stage_exe.dir/rule
+
+# Convenience name for target.
+stage_exe: stage_package/CMakeFiles/stage_exe.dir/rule
+
+.PHONY : stage_exe
+
+# clean rule for target.
+stage_package/CMakeFiles/stage_exe.dir/clean:
+	$(MAKE) -f stage_package/CMakeFiles/stage_exe.dir/build.make stage_package/CMakeFiles/stage_exe.dir/clean
+.PHONY : stage_package/CMakeFiles/stage_exe.dir/clean
+
+# clean rule for target.
+clean: stage_package/CMakeFiles/stage_exe.dir/clean
 
 .PHONY : clean
 

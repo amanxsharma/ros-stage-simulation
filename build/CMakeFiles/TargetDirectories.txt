@@ -49,3 +49,11 @@
 /home/aman/catkin_ws/build/my_stage/CMakeFiles/install/local.dir
 /home/aman/catkin_ws/build/my_stage/CMakeFiles/install.dir
 /home/aman/catkin_ws/build/my_stage/CMakeFiles/test.dir
+/home/aman/catkin_ws/build/stage_package/CMakeFiles/rebuild_cache.dir
+/home/aman/catkin_ws/build/stage_package/CMakeFiles/edit_cache.dir
+/home/aman/catkin_ws/build/stage_package/CMakeFiles/install/strip.dir
+/home/aman/catkin_ws/build/stage_package/CMakeFiles/list_install_components.dir
+/home/aman/catkin_ws/build/stage_package/CMakeFiles/install/local.dir
+/home/aman/catkin_ws/build/stage_package/CMakeFiles/stage_exe.dir
+/home/aman/catkin_ws/build/stage_package/CMakeFiles/install.dir
+/home/aman/catkin_ws/build/stage_package/CMakeFiles/test.dir

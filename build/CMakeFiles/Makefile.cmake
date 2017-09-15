@@ -17,11 +17,15 @@ set(CMAKE_MAKEFILE_DEPENDS
   "catkin_generated/order_packages.cmake"
   "my_stage/catkin_generated/ordered_paths.cmake"
   "my_stage/catkin_generated/package.cmake"
+  "stage_package/catkin_generated/ordered_paths.cmake"
+  "stage_package/catkin_generated/package.cmake"
   "/home/aman/catkin_ws/src/CMakeLists.txt"
   "/home/aman/catkin_ws/src/beginner_tutorials/CMakeLists.txt"
   "/home/aman/catkin_ws/src/beginner_tutorials/package.xml"
   "/home/aman/catkin_ws/src/my_stage/CMakeLists.txt"
   "/home/aman/catkin_ws/src/my_stage/package.xml"
+  "/home/aman/catkin_ws/src/stage_package/CMakeLists.txt"
+  "/home/aman/catkin_ws/src/stage_package/package.xml"
   "/opt/ros/kinetic/share/catkin/cmake/../package.xml"
   "/opt/ros/kinetic/share/catkin/cmake/all.cmake"
   "/opt/ros/kinetic/share/catkin/cmake/assert.cmake"
@@ -155,6 +159,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "gtest/CMakeFiles/CMakeDirectoryInformation.cmake"
   "beginner_tutorials/CMakeFiles/CMakeDirectoryInformation.cmake"
   "my_stage/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "stage_package/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -182,4 +187,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/DependInfo.cmake"
   "beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/DependInfo.cmake"
   "my_stage/CMakeFiles/stopper.dir/DependInfo.cmake"
+  "stage_package/CMakeFiles/stage_exe.dir/DependInfo.cmake"
   )
