@@ -2,12 +2,13 @@
 #include "geometry_msgs/Twist.h"
 
 stage_class::stage_class(){
-	keepMoving = true;
+	flagToMove = true;
 	edgeTraveled = 0;
 	counter = 0;
-	commandPub = node.advertise<geometry_msgs::Twist>("cmd_vel", 10);
+	current_angle = 0;
+	messagePublisher = nodeHandle.advertise<geometry_msgs::Twist>("cmd_vel", 10);
 
-	laserSub = node.subscribe("base_scan", 1, &stage_class::scanCallback, this);
+	laserSubscriber = nodeHandle.subscribe("base_scan", 1, &stage_class::scanCallback, this);
 }
 
 int main(int argc, char **argv){
@@ -22,7 +23,7 @@ void stage_class::start(){
 	ros::Rate rate(10);
 	ROS_INFO("Measurement done, Start Moving Forward");
 
-	while(ros::ok() && keepMoving && edgeTraveled < 4){
+	while(ros::ok() && flagToMove && edgeTraveled < 4){
 		runForward();
 		ros::spinOnce();
 
@@ -33,7 +34,7 @@ void stage_class::start(){
 void stage_class::runForward(){
 	geometry_msgs::Twist msg;
 	msg.linear.x = FORWARD_SPEED_MPS;
-	commandPub.publish(msg);
+	messagePublisher.publish(msg);
 }
 
 void stage_class::turnLeft(){
@@ -43,15 +44,16 @@ void stage_class::turnLeft(){
 	t0 = ros::Time::now().toSec();
 	
 	while(current_angle < final_angle){
-		commandPub.publish(msg);
+		messagePublisher.publish(msg);
 		t1 = ros::Time::now().toSec();	
 		current_angle = TURN_SPEED_MPS * (t1 - t0);
 		//ROS_INFO_STREAM("t0 = "<<t0<<" t1 = "<<t1);
 		//ROS_INFO_STREAM("Current Angle = "<<current_angle);
 	}
 	edgeTraveled++;
-	keepMoving = true;
+	flagToMove = true;
 	counter = 0;
+	current_angle = 0;
 
 }
 
@@ -77,7 +79,7 @@ void stage_class::scanCallback(const sensor_msgs::LaserScan::ConstPtr& laserScan
 	//if(closestRange < MIN_PROXIMITY_RANGE_M){
 	if(closestRange < distanceOfWall / 2){
 		ROS_INFO("Stop!");
-		keepMoving = false;
+		flagToMove = false;
 		ROS_INFO("Turn Left!");
 		turnLeft();
 		
