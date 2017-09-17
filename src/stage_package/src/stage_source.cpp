@@ -47,10 +47,9 @@ void stage_class::turnLeft(){
 		messagePublisher.publish(msg);
 		t1 = ros::Time::now().toSec();	
 		current_angle = TURN_SPEED_MPS * (t1 - t0);
-		//ROS_INFO_STREAM("t0 = "<<t0<<" t1 = "<<t1);
-		//ROS_INFO_STREAM("Current Angle = "<<current_angle);
 	}
-	edgeTraveled++;
+	msg.angular.z = 0.0;
+	messagePublisher.publish(msg);
 	flagToMove = true;
 	counter = 0;
 	current_angle = 0;
@@ -59,33 +58,23 @@ void stage_class::turnLeft(){
 
 void stage_class::scanCallback(const sensor_msgs::LaserScan::ConstPtr& laserScan) {
 
-	int minIndex = ceil((MIN_SCAN_ANGLE_RAD - laserScan->angle_min) / laserScan->angle_increment);
-	int maxIndex = floor((MAX_SCAN_ANGLE_RAD - laserScan->angle_min) / laserScan->angle_increment);
-	
+	int size = laserScan->ranges.size();
 	if(counter == 0){
-		distanceOfWall = laserScan->ranges[minIndex]; //get distance from wall, only once for each wall
+		distanceOfWall = laserScan->ranges[size/2]; //get distance from wall, only once for each wall
 		counter++;
 	}
-	float closestRange = laserScan->ranges[minIndex];
-	
-	for(int currIndex = minIndex + 1; currIndex <= maxIndex; currIndex++){
-		if(laserScan->ranges[currIndex] < closestRange){
-			closestRange = laserScan->ranges[currIndex];
-		}
-	}
+	float closestRange = laserScan->ranges[size/2];	
 
 	ROS_INFO_STREAM("Closest range: " << closestRange <<" distanceOfWall: "<<distanceOfWall);
 
-	//if(closestRange < MIN_PROXIMITY_RANGE_M){
 	if(closestRange < distanceOfWall / 2){
 		ROS_INFO("Stop!");
 		flagToMove = false;
-		ROS_INFO("Turn Left!");
-		turnLeft();
-		
+		edgeTraveled++;
+		if(edgeTraveled < 4) {
+			ROS_INFO("Turn Left!");
+			turnLeft();
+		}	
 	}
 }
-
-
-
 
