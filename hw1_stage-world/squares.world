@@ -1,0 +1,106 @@
+# squares.world - Squares world file.
+# Authors: Alberto Quattrini Li
+# To run it
+# rosrun stage_ros stageros squares.world
+
+# time to pause (in GUI mode) or quit (in headless mode (-g)) the simulation
+quit_time 3600 # 1 hour of simulated time
+
+paused 0
+
+# spatial resolution of the underlying occupancy grid. Default is 0.02m.
+resolution 0.02
+
+# set the multiple of real time that Stage should try to achieve. Default is 1. 
+# set to 0 to go as fast as possible.
+speedup 0
+
+# configure the GUI window
+window
+(
+  size [ 635.000 666.000 ] # in pixels
+  scale 36.995   # pixels per meter
+  center [ -0.040  -0.274 ]
+  rotate [ 0  0 ]
+  			
+  show_data 1              # 1=on 0=off
+)
+
+# Definition of the floorplan that contains the world
+define floorplan model
+(
+  # sombre, sensible, artistic
+  color "gray30"
+
+  # most maps will need a bounding box
+  boundary 1
+
+  gui_nose 0
+  gui_grid 0
+
+  gui_outline 0
+  gripper_return 0
+  fiducial_return 0
+  laser_return 1
+)
+
+# load an environment bitmap
+floorplan
+( 
+  name "squares"
+  size [16.000 16.000 0.800]
+  pose [0 0 0 0]
+  bitmap "squares.png"
+)
+
+# Laser sensor
+define topurg ranger
+(
+  sensor
+  (
+    range_max 30.0
+    fov 270.25
+    samples 1081
+  )
+  # generic model properties
+  color "black"
+  size [ 0.05 0.05 0.1 ]
+)
+
+# Robot called erratic with laser sensor
+define erratic position
+(
+  #size [0.415 0.392 0.25]
+  size [0.35 0.35 0.25]
+  origin [-0.05 0 0 0]
+  gui_nose 1
+  drive "diff"
+  topurg
+  (
+    pose [0.050 0.000 0 0.000]
+  )
+)
+
+# throw in a robot
+erratic
+( 
+  pose [-6.0 -6.0 0 90.000] 
+  name "robot1" 
+  color "blue"
+)
+
+# throw in a robot
+erratic
+( 
+  pose [-6.0 4.0 0 90.000] 
+  name "robot2" 
+  color "red"
+)
+
+# throw in a robot
+erratic
+( 
+  pose [1.0 -5.0 0 90.000] 
+  name "robot3" 
+  color "black"
+)
