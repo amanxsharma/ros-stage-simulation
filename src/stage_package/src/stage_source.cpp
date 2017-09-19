@@ -6,8 +6,8 @@ stage_class::stage_class(){
 	edgeTraveled = 0;
 	counter = 0;
 	current_angle = 0;
-	messagePublisher = nodeHandle.advertise<geometry_msgs::Twist>("robot_0/cmd_vel", 10);
-	laserSubscriber = nodeHandle.subscribe("robot_0/base_scan", 1, &stage_class::scanCallback, this);
+	messagePublisher = nodeHandle.advertise<geometry_msgs::Twist>("cmd_vel", 10);
+	laserSubscriber = nodeHandle.subscribe("base_scan", 1, &stage_class::scanCallback, this);
 	
 	
 }

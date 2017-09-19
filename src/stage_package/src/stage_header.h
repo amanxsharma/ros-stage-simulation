@@ -4,7 +4,7 @@
 class stage_class {
 public:
 	const static double FORWARD_SPEED_MPS = 0.1;//0.5;
-	const static double TURN_SPEED_MPS = -0.005; //9 0.0087
+	const static double TURN_SPEED_MPS = -0.005; //= 3 degrees//-0.001; = 2.54degrees//-0.00174; //9 0.0087
     
 	float current_angle;
 	const static float final_angle = 1.57; //-90 degrees equals -1.57 rad
