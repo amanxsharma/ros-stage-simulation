@@ -8,7 +8,7 @@ public:
     
 	float current_angle;
 	const static float final_angle = 1.75; //-90 degrees equals -1.57 rad
-	double t1, t0;
+	double t1, t0, dt0, dt1;
 
 	stage_class();
 	void start();
@@ -22,6 +22,7 @@ private:
 	int edgeTraveled;
 	int counter;
 	float distanceOfWall;
+	float distanceTraveled;
  
 	void runForward();
 	void turn();
