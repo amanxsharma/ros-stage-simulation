@@ -879,6 +879,16 @@ stage_package/all: stage_package/CMakeFiles/stage_exe.dir/all
 
 # Convenience name for "clean" pass in the directory.
 stage_package/clean: stage_package/CMakeFiles/stage_exe.dir/clean
+stage_package/clean: stage_package/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+stage_package/clean: stage_package/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+stage_package/clean: stage_package/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
+stage_package/clean: stage_package/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
+stage_package/clean: stage_package/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
+stage_package/clean: stage_package/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
+stage_package/clean: stage_package/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
+stage_package/clean: stage_package/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
+stage_package/clean: stage_package/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
+stage_package/clean: stage_package/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
 
 .PHONY : stage_package/clean
 
@@ -921,6 +931,326 @@ stage_package/CMakeFiles/stage_exe.dir/clean:
 
 # clean rule for target.
 clean: stage_package/CMakeFiles/stage_exe.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target stage_package/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+stage_package/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f stage_package/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make stage_package/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f stage_package/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make stage_package/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aman/catkin_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_nodejs"
+.PHONY : stage_package/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+stage_package/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aman/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 stage_package/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aman/catkin_ws/build/CMakeFiles 0
+.PHONY : stage_package/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_nodejs: stage_package/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_nodejs
+
+# clean rule for target.
+stage_package/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f stage_package/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make stage_package/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+.PHONY : stage_package/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+
+# clean rule for target.
+clean: stage_package/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target stage_package/CMakeFiles/sensor_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+stage_package/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f stage_package/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make stage_package/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f stage_package/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make stage_package/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aman/catkin_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_lisp"
+.PHONY : stage_package/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+stage_package/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aman/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 stage_package/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aman/catkin_ws/build/CMakeFiles 0
+.PHONY : stage_package/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_lisp: stage_package/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_lisp
+
+# clean rule for target.
+stage_package/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f stage_package/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make stage_package/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+.PHONY : stage_package/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+
+# clean rule for target.
+clean: stage_package/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target stage_package/CMakeFiles/geometry_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+stage_package/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f stage_package/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make stage_package/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f stage_package/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make stage_package/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aman/catkin_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_lisp"
+.PHONY : stage_package/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+stage_package/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aman/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 stage_package/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aman/catkin_ws/build/CMakeFiles 0
+.PHONY : stage_package/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_lisp: stage_package/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_lisp
+
+# clean rule for target.
+stage_package/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f stage_package/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make stage_package/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
+.PHONY : stage_package/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
+
+# clean rule for target.
+clean: stage_package/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target stage_package/CMakeFiles/sensor_msgs_generate_messages_eus.dir
+
+# All Build rule for target.
+stage_package/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f stage_package/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make stage_package/CMakeFiles/sensor_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f stage_package/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make stage_package/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aman/catkin_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_eus"
+.PHONY : stage_package/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+stage_package/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aman/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 stage_package/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aman/catkin_ws/build/CMakeFiles 0
+.PHONY : stage_package/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_eus: stage_package/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_eus
+
+# clean rule for target.
+stage_package/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f stage_package/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make stage_package/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
+.PHONY : stage_package/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
+
+# clean rule for target.
+clean: stage_package/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target stage_package/CMakeFiles/geometry_msgs_generate_messages_eus.dir
+
+# All Build rule for target.
+stage_package/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f stage_package/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make stage_package/CMakeFiles/geometry_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f stage_package/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make stage_package/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aman/catkin_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_eus"
+.PHONY : stage_package/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+stage_package/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aman/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 stage_package/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aman/catkin_ws/build/CMakeFiles 0
+.PHONY : stage_package/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_eus: stage_package/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_eus
+
+# clean rule for target.
+stage_package/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f stage_package/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make stage_package/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
+.PHONY : stage_package/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
+
+# clean rule for target.
+clean: stage_package/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target stage_package/CMakeFiles/sensor_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+stage_package/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f stage_package/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make stage_package/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f stage_package/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make stage_package/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aman/catkin_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_cpp"
+.PHONY : stage_package/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+stage_package/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aman/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 stage_package/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aman/catkin_ws/build/CMakeFiles 0
+.PHONY : stage_package/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_cpp: stage_package/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_cpp
+
+# clean rule for target.
+stage_package/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f stage_package/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make stage_package/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
+.PHONY : stage_package/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
+
+# clean rule for target.
+clean: stage_package/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target stage_package/CMakeFiles/sensor_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+stage_package/CMakeFiles/sensor_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f stage_package/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make stage_package/CMakeFiles/sensor_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f stage_package/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make stage_package/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aman/catkin_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_py"
+.PHONY : stage_package/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+stage_package/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aman/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 stage_package/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aman/catkin_ws/build/CMakeFiles 0
+.PHONY : stage_package/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_py: stage_package/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_py
+
+# clean rule for target.
+stage_package/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f stage_package/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make stage_package/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
+.PHONY : stage_package/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
+
+# clean rule for target.
+clean: stage_package/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target stage_package/CMakeFiles/geometry_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+stage_package/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f stage_package/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make stage_package/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f stage_package/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make stage_package/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aman/catkin_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_cpp"
+.PHONY : stage_package/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+stage_package/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aman/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 stage_package/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aman/catkin_ws/build/CMakeFiles 0
+.PHONY : stage_package/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_cpp: stage_package/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# clean rule for target.
+stage_package/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f stage_package/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make stage_package/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
+.PHONY : stage_package/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
+
+# clean rule for target.
+clean: stage_package/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target stage_package/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+stage_package/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f stage_package/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make stage_package/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f stage_package/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make stage_package/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aman/catkin_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_nodejs"
+.PHONY : stage_package/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+stage_package/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aman/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 stage_package/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aman/catkin_ws/build/CMakeFiles 0
+.PHONY : stage_package/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_nodejs: stage_package/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_nodejs
+
+# clean rule for target.
+stage_package/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f stage_package/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make stage_package/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
+.PHONY : stage_package/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
+
+# clean rule for target.
+clean: stage_package/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target stage_package/CMakeFiles/geometry_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+stage_package/CMakeFiles/geometry_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f stage_package/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make stage_package/CMakeFiles/geometry_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f stage_package/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make stage_package/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aman/catkin_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_py"
+.PHONY : stage_package/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+stage_package/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aman/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 stage_package/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aman/catkin_ws/build/CMakeFiles 0
+.PHONY : stage_package/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_py: stage_package/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_py
+
+# clean rule for target.
+stage_package/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f stage_package/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make stage_package/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
+.PHONY : stage_package/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
+
+# clean rule for target.
+clean: stage_package/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
 
 .PHONY : clean
 
