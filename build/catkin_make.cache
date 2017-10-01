@@ -1,2 +1,2 @@
-beginner_tutorials:my_stage:stage_package
+beginner_tutorials:line_follower:my_stage:stage_package
 -DCATKIN_DEVEL_PREFIX=/home/aman/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/aman/catkin_ws/install -G Unix Makefiles

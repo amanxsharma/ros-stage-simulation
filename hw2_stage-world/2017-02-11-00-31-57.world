@@ -1,0 +1,53 @@
+include "tutorial.inc"
+
+define floorplan model
+(
+  # sombre, sensible, artistic
+  color "gray30"
+
+  # most maps will need a bounding box
+  boundary 1
+
+  gui_nose 0
+  gui_grid 0
+  gui_outline 0
+  gripper_return 0
+  fiducial_return 0
+  laser_return 1
+)
+
+resolution 0.025
+interval_sim 10  # simulation timestep in milliseconds
+
+window
+(
+  size [ 600.0 700.0 ]
+  center [ 40.0 15.0 ]
+  rotate [ 0.0 0.0 ]
+  scale 10
+)
+
+floorplan
+(
+  name "tutorial"
+  bitmap "2017-02-11-00-31-57_bw.png"
+  size [ 66.4 92.0 2.0 ]
+  pose [  33.2  46.0 0.0 0.0 ]
+)
+
+# throw in a robot
+turtlebot
+(
+  pose [ 51.0 3.0 0.0 0.0 ]
+  name "turtlebot1"
+  color "blue"
+)
+
+# throw in a robot
+turtlebot
+(
+  pose [ 52.0 3.5 0.0 0.0 ]
+  name "turtlebot2"
+  color "red"
+)
+

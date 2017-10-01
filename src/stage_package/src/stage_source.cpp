@@ -88,7 +88,7 @@ void stage_class::scanCallback(const sensor_msgs::LaserScan::ConstPtr& laserScan
 		flagToMove = false;
 		edgeTraveled++;
 		if(edgeTraveled < 4) {
-		ROS_INFO("Turn Left!");
+		ROS_INFO("Turn Right!");
 		turn();
 		
 		}
