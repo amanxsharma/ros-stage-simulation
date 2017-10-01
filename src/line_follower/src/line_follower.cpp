@@ -29,7 +29,7 @@ int main(int argc, char **argv)
   //Creating object, which stores data from sensors and has methods for
   //publishing and subscribing
 //  NodeWallFollowing *nodeWallFollowing = new NodeWallFollowing(pubMessage, WALL_DISTANCE, MAX_SPEED, DIRECTION, P, D, 1);
-  NodeWallFollowing *nodeWallFollowing = new NodeWallFollowing(pubMessage, 1.0, 0.1, 1, 10, 5, 1); //1 for right wall
+  NodeWallFollowing *nodeWallFollowing = new NodeWallFollowing(pubMessage, 1.0, 0.1, -1, 10, 5, 1); //1 for right wall
 
   //Creating subscriber and publisher
   ros::Subscriber sub = n.subscribe("base_scan", 1, &NodeWallFollowing::messageCallback, nodeWallFollowing);
@@ -45,7 +45,6 @@ const static int SUBSCRIBER_BUFFER_SIZE = 1;  // Size of buffer for subscriber.
 const static int PUBLISHER_BUFFER_SIZE = 1000;  // Size of buffer for publisher.
 const static double WALL_DISTANCE = 0.13;
 const static double MAX_SPEED = 0.1;
-
 const static int ANGLE_COEF = 1;    // Proportional constant for angle controller
 const static int DIRECTION = 1; // 1 for wall on the left side of the robot (-1 for the right side).
 */
