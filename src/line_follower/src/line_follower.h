@@ -3,12 +3,13 @@
 #include "geometry_msgs/Twist.h"
 
 
-class NodeWallFollowing {
+class LineFollowing {
 public:
 
-  NodeWallFollowing(ros::Publisher pub, double wallDist, double maxSp, int dir, double pr, double di, double an);
+  //LineFollowing(ros::Publisher pub, double wallDist, double maxSp, int dir, double pr, double di, double an);
+  LineFollowing();
 
-  ~NodeWallFollowing();
+ // ~LineFollowing();
 
 
   void publishMessage();
@@ -29,6 +30,9 @@ public:
   double distFront;    // Distance, measured by ranger in front of robot.
   ros::Publisher pubMessage;  // Object for publishing messages.
 
+  ros::NodeHandle nodeHandle;
+  //ros::Publisher pub;
+  ros::Subscriber sub;
 const static int SUBSCRIBER_BUFFER_SIZE = 1;  // Size of buffer for subscriber.
 const static int PUBLISHER_BUFFER_SIZE = 1000;  // Size of buffer for publisher.
 const static double WALL_DISTANCE = 0.13;

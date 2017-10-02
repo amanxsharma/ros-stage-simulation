@@ -3,18 +3,22 @@
 #define PI 3.141592
 
 
-NodeWallFollowing::NodeWallFollowing(ros::Publisher pub, double wallDist, double maxSp, int dir, double pr, double di, double an)
+//LineFollowing::LineFollowing(ros::Publisher pub, double wallDist, double maxSp, int dir, double pr, double di, double an)
+LineFollowing::LineFollowing()
 {
-  wallDistance = wallDist;
-  maxSpeed = maxSp;
-  direction = dir;
-  P = pr;
-  D = di;
-  angleCoef = an;
+ROS_INFO("constructor called");
+  wallDistance = 1.0;//wallDist;
+  maxSpeed = 0.1;//maxSp;
+  //direction = -1;//dir;
+  P = 10;//pr;
+  D = 5;//di;
+  //angleCoef = an;
   e = 0;
   angleMin = 0;  //angle, at which was measured the shortest distance
-  pubMessage = pub;
- 
+//  pubMessage = pub;
+ sub = nodeHandle.subscribe("base_scan", 1, &LineFollowing::messageCallback, this);
+ pubMessage = nodeHandle.advertise<geometry_msgs::Twist>("cmd_vel", 1000);//PUBLISHER_BUFFER_SIZE);
+
 }
 
 int main(int argc, char **argv)
@@ -22,17 +26,18 @@ int main(int argc, char **argv)
   //Initialization of node
   ros::init(argc, argv, "wallFollowing");
 
-  ros::NodeHandle n;
+  //ros::NodeHandle n;
   //Creating publisher
-  ros::Publisher pubMessage = n.advertise<geometry_msgs::Twist>("cmd_vel", 1000);//PUBLISHER_BUFFER_SIZE);
+  
 
   //Creating object, which stores data from sensors and has methods for
   //publishing and subscribing
-//  NodeWallFollowing *nodeWallFollowing = new NodeWallFollowing(pubMessage, WALL_DISTANCE, MAX_SPEED, DIRECTION, P, D, 1);
-  NodeWallFollowing *nodeWallFollowing = new NodeWallFollowing(pubMessage, 1.0, 0.1, -1, 10, 5, 1); //1 for right wall
+//  LineFollowing *lineFollowing = new LineFollowing(pubMessage, WALL_DISTANCE, MAX_SPEED, DIRECTION, P, D, 1);
+  LineFollowing *lineFollowing = new LineFollowing(); //1 for right wall
+//LineFollowing lineFollowing; //1 for right wall
 
   //Creating subscriber and publisher
-  ros::Subscriber sub = n.subscribe("base_scan", 1, &NodeWallFollowing::messageCallback, nodeWallFollowing);
+//  ros::Subscriber sub = n.subscribe("base_scan", 1, &LineFollowing::messageCallback, lineFollowing);
   
   ros::spin();
 
@@ -50,17 +55,18 @@ const static int DIRECTION = 1; // 1 for wall on the left side of the robot (-1 
 */
 }
 
-NodeWallFollowing::~NodeWallFollowing()
+/*LineFollowing::~LineFollowing()
 {
 }
-
+*/
 //Publisher
-void NodeWallFollowing::publishMessage()
+void LineFollowing::publishMessage()
 {
   //preparing message
   geometry_msgs::Twist msg;
 
-double temp = direction*(P*e + D*diffE) + angleCoef * (angleMin - PI*direction/2);
+//double temp = direction*(P*e + D*diffE) + (angleMin - PI*direction/2);
+double temp =  (angleMin + PI/2) - (P*e + D*diffE);
 //ROS_INFO_STREAM("direc: "<<direction<<" e: "<<e<<" diffE: "<<diffE<<" angleMin: "<<angleMin<<" z: "<<temp);
 
   msg.angular.z = temp;    //PD controller
@@ -83,14 +89,17 @@ double temp = direction*(P*e + D*diffE) + angleCoef * (angleMin - PI*direction/2
 }
 
 //Subscriber
-void NodeWallFollowing::messageCallback(const sensor_msgs::LaserScan::ConstPtr& msg)
+void LineFollowing::messageCallback(const sensor_msgs::LaserScan::ConstPtr& msg)
 {
-  //ROS_INFO("inside callback");
+  ROS_INFO("inside callback");
   int size = msg->ranges.size();
 
   //Variables whith index of highest and lowest value in array.
-  int minIndex = size*(direction+1)/4;	
-  int maxIndex = size*(direction+3)/4;
+//  int minIndex = size*(direction+1)/4;	
+//  int maxIndex = size*(direction+3)/4;
+
+  int minIndex = 0;//size*(direction+1)/4;	
+  int maxIndex = size/2;//size*(direction+3)/4;
 
   
   //This cycle goes through array and finds minimum
