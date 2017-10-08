@@ -608,6 +608,19 @@ stopper/fast:
 .PHONY : stopper/fast
 
 #=============================================================================
+# Target rules for targets named pd_controller
+
+# Build rule for target.
+pd_controller: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pd_controller
+.PHONY : pd_controller
+
+# fast build rule for target.
+pd_controller/fast:
+	$(MAKE) -f pd_controller/CMakeFiles/pd_controller.dir/build.make pd_controller/CMakeFiles/pd_controller.dir/build
+.PHONY : pd_controller/fast
+
+#=============================================================================
 # Target rules for targets named stage_exe
 
 # Build rule for target.
@@ -667,6 +680,7 @@ help:
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... stopper"
+	@echo "... pd_controller"
 	@echo "... stage_exe"
 .PHONY : help
 

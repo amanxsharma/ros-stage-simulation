@@ -7,7 +7,7 @@ LineFollowing::LineFollowing()
 {
 //ROS_INFO("constructor called");
   wallDistance = 0.5;//1.0;//wallDist;
-  maxSpeed = 0.1;//maxSp;
+  maxSpeed = 0.5*0.1;//maxSp;
 
   P = 10;//pr;
   D = 5;//di;
@@ -40,20 +40,24 @@ double temp =  (angleMin + PI/2) - (P*e + D*diffE);
 //ROS_INFO_STREAM("direc: "<<direction<<" e: "<<e<<" diffE: "<<diffE<<" angleMin: "<<angleMin<<" z: "<<temp);
 
   msg.angular.z = temp;    //PD controller
+  msg.linear.x = maxSpeed;
 
   if (distFront < wallDistance){
     msg.linear.x = 0;				//start turning
-  }
-  else if (distFront < wallDistance * 2){
+	ROS_INFO("here");  
+}
+  /*else if (distFront < wallDistance * 2){
     msg.linear.x = 0.5*maxSpeed;		//slow down
-  }
+  }*/
+
   else if (fabs(angleMin)>1.75){
-    msg.linear.x = 0.4*maxSpeed;
-	ROS_INFO("fabs");
+    //msg.linear.x = 0.4*maxSpeed;
+msg.linear.x = maxSpeed;
+	ROS_INFO("here too..........");
   } 
-  else {
+  /*else {
     msg.linear.x = maxSpeed;
-  }
+  }*/
 
   //publishing message
   pubMessage.publish(msg);
@@ -80,13 +84,13 @@ void LineFollowing::messageCallback(const sensor_msgs::LaserScan::ConstPtr& msg)
   //Calculation of angles from indexes and storing data to class variables.
   angleMin = (minIndex-size/2)*msg->angle_increment;
 
-  double distMin;
-  distMin = msg->ranges[minIndex];   //I think this is right Wall
+  //double distMin;
+  //distMin = msg->ranges[minIndex];   //I think this is right Wall
 
   distFront = msg->ranges[size/2];   //300 CHANGED...originally it was size/2, but my robot is inclined
   //ROS_INFO_STREAM("distFront: "<<distFront);
-  diffE = (distMin - wallDistance) - e;
-  e = distMin - wallDistance;
+  diffE = (msg->ranges[minIndex] - wallDistance) - e;
+  e = msg->ranges[minIndex] - wallDistance;
   //Invoking method for publishing message
   publishMessage();
 }

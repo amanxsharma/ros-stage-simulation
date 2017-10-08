@@ -1,0 +1,8 @@
+prefix=/home/aman/catkin_ws/install
+
+Name: pd_controller
+Description: Description of pd_controller
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/aman/catkin_ws/install/lib 
+Requires: roscpp rospy std_msgs sensor_msgs geometry_msgs
