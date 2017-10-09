@@ -1,4 +1,4 @@
-#include "pd_controller.h"
+#include "pid_controller.h"
 #include <math.h>
 #define PI 3.141592
 
@@ -10,11 +10,14 @@ WallFollower::WallFollower()
   maxSpeed = 0.05;
   Kp = 10;
   Kd = 5;
+  Ki = 0.0001;
   error = 0;
+  integral = 0;   
   angleMin = 0;  
 
- sub = nodeHandle.subscribe("base_scan", 1, &WallFollower::messageCallback, this); //subscriber
- pubMessage = nodeHandle.advertise<geometry_msgs::Twist>("cmd_vel", 1000);         //Publisher
+ sub = nodeHandle.subscribe("base_scan", 1, &WallFollower::messageCallback, this);   //subscriber
+ pubMessage = nodeHandle.advertise<geometry_msgs::Twist>("cmd_vel", 1000);          //publisher
+
 }
 
 int main(int argc, char **argv)
@@ -26,17 +29,17 @@ int main(int argc, char **argv)
   return 0;
 }
 
-//function to publish message
+//Message publishing function
 void WallFollower::publishMessage()
 {
   geometry_msgs::Twist msg;
 
-  double PD_value = Kp*error + Kd*derivative; //PD controller
+  double PID_value = Kp*error + Kd*derivative + Ki*integral; //PID Controller
 
   double correction_value = angleMin + PI/2;
   
-  msg.angular.z = correction_value - PD_value; //angular velocity
-  msg.linear.x = maxSpeed;                     //Linear velocity
+  msg.angular.z = correction_value - PID_value;  //angular velocity;    
+  msg.linear.x = maxSpeed;                       //linear velocity
 
   if (distFront < wallDistance){
     msg.linear.x = 0;				//stop and turn 
@@ -49,7 +52,7 @@ void WallFollower::publishMessage()
  pubMessage.publish(msg);
 }
 
-//Callback function for subscriber
+//Callback function
 void WallFollower::messageCallback(const sensor_msgs::LaserScan::ConstPtr& msg)
 {
   
@@ -68,5 +71,6 @@ void WallFollower::messageCallback(const sensor_msgs::LaserScan::ConstPtr& msg)
   distFront = msg->ranges[size/2];   
   derivative = (msg->ranges[min] - wallDistance) - error;
   error = msg->ranges[min] - wallDistance;
+  integral = integral + error;
   publishMessage();
 }

@@ -621,6 +621,19 @@ pd_controller/fast:
 .PHONY : pd_controller/fast
 
 #=============================================================================
+# Target rules for targets named pid_controller
+
+# Build rule for target.
+pid_controller: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pid_controller
+.PHONY : pid_controller
+
+# fast build rule for target.
+pid_controller/fast:
+	$(MAKE) -f pid_controller/CMakeFiles/pid_controller.dir/build.make pid_controller/CMakeFiles/pid_controller.dir/build
+.PHONY : pid_controller/fast
+
+#=============================================================================
 # Target rules for targets named stage_exe
 
 # Build rule for target.
@@ -681,6 +694,7 @@ help:
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... stopper"
 	@echo "... pd_controller"
+	@echo "... pid_controller"
 	@echo "... stage_exe"
 .PHONY : help
 

@@ -310,6 +310,12 @@ pd_controller_BINARY_DIR:STATIC=/home/aman/catkin_ws/build/pd_controller
 //Value Computed by CMake
 pd_controller_SOURCE_DIR:STATIC=/home/aman/catkin_ws/src/pd_controller
 
+//Value Computed by CMake
+pid_controller_BINARY_DIR:STATIC=/home/aman/catkin_ws/build/pid_controller
+
+//Value Computed by CMake
+pid_controller_SOURCE_DIR:STATIC=/home/aman/catkin_ws/src/pid_controller
+
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/kinetic/share/rosconsole/cmake
 
@@ -448,7 +454,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

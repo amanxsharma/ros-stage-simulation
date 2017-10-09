@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 2.8.3)
+project(pid_controller)
+
+find_package(catkin REQUIRED COMPONENTS
+  roscpp
+  rospy
+  std_msgs
+  sensor_msgs
+  geometry_msgs
+)
+
+catkin_package(
+  CATKIN_DEPENDS roscpp rospy std_msgs sensor_msgs geometry_msgs
+)
+
+include_directories(
+  ${catkin_INCLUDE_DIRS}
+)
+
+add_executable(pid_controller src/pid_controller.cpp)
+
+target_link_libraries(pid_controller ${catkin_LIBRARIES})
+

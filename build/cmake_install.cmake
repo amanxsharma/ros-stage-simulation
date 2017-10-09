@@ -121,6 +121,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/aman/catkin_ws/build/line_follower/cmake_install.cmake")
   include("/home/aman/catkin_ws/build/my_stage/cmake_install.cmake")
   include("/home/aman/catkin_ws/build/pd_controller/cmake_install.cmake")
+  include("/home/aman/catkin_ws/build/pid_controller/cmake_install.cmake")
   include("/home/aman/catkin_ws/build/stage_package/cmake_install.cmake")
 
 endif()

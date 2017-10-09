@@ -75,6 +75,14 @@
 /home/aman/catkin_ws/build/pd_controller/CMakeFiles/install/local.dir
 /home/aman/catkin_ws/build/pd_controller/CMakeFiles/install.dir
 /home/aman/catkin_ws/build/pd_controller/CMakeFiles/test.dir
+/home/aman/catkin_ws/build/pid_controller/CMakeFiles/rebuild_cache.dir
+/home/aman/catkin_ws/build/pid_controller/CMakeFiles/edit_cache.dir
+/home/aman/catkin_ws/build/pid_controller/CMakeFiles/install/strip.dir
+/home/aman/catkin_ws/build/pid_controller/CMakeFiles/list_install_components.dir
+/home/aman/catkin_ws/build/pid_controller/CMakeFiles/install.dir
+/home/aman/catkin_ws/build/pid_controller/CMakeFiles/install/local.dir
+/home/aman/catkin_ws/build/pid_controller/CMakeFiles/pid_controller.dir
+/home/aman/catkin_ws/build/pid_controller/CMakeFiles/test.dir
 /home/aman/catkin_ws/build/stage_package/CMakeFiles/rebuild_cache.dir
 /home/aman/catkin_ws/build/stage_package/CMakeFiles/edit_cache.dir
 /home/aman/catkin_ws/build/stage_package/CMakeFiles/install/strip.dir
